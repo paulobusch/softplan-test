@@ -15,8 +15,8 @@ namespace Softplan.UnitTests.Services
             yield return new object[] { new FeesParams { Capital = 100, Time = 5, Fee = 0.01m }, 105.10m };
             yield return new object[] { new FeesParams { Capital = 100, Time = 5, Fee = 0.08m }, 146.93m };
             yield return new object[] { new FeesParams { Capital = 100, Time = 12, Fee = 0.01m }, 112.68m };
-            yield return new object[] { new FeesParams { Capital = 50000, Time = 6, Fee = 0.01m }, 52550.50m };
-            yield return new object[] { new FeesParams { Capital = 50000, Time = 6, Fee = 0.08m }, 52550.50m };
+            yield return new object[] { new FeesParams { Capital = 50000, Time = 6, Fee = 0.01m }, 53076.00m };
+            yield return new object[] { new FeesParams { Capital = 50000, Time = 6, Fee = 0.08m }, 79343.71m };
             yield return new object[] { new FeesParams { Capital = 50000, Time = 12, Fee = 0.01m }, 56341.25m };
         }
 
