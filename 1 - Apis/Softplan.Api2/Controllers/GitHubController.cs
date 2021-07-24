@@ -3,6 +3,7 @@ using Softplan.Domain.Results;
 
 namespace Softplan.Api2.Controllers
 {
+    [Route("github")]
     public class GitHubController : SoftplanControllerBase
     {
         [HttpGet("showmethecode")]

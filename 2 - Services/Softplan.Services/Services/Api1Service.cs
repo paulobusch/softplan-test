@@ -22,15 +22,9 @@ namespace Softplan.Services.Services
 
         public async Task<Result<decimal>> GetFeeAsync()
         {
-            try
-            {
-                var request = new RestRequest("consulta/taxajuros", Method.GET);
-                var result = await _client.ExecuteAsync<Result<decimal>>(request);
-                return result.Data;
-            } catch
-            {
-                return new Result<decimal>(Status.Invalid, "Error on send request to Api1");
-            }
+            var request = new RestRequest("consulta/taxajuros", Method.GET);
+            var result = await _client.ExecuteAsync<Result<decimal>>(request);
+            return result.Data ?? new Result<decimal>(Status.Error, "Error on send request to Api1");
         }
     }
 }
