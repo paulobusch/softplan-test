@@ -3,10 +3,10 @@ using Softplan.Domain.Results;
 
 namespace Softplan.Api1.Controllers
 {
-    [Route("taxajuros")]
+    [Route("consulta")]
     public class InterestRateController : SoftplanControllerBase
     {
-        [HttpGet]
+        [HttpGet("taxajuros")]
         public Result<decimal> Get() => GetResult(0.01m);
     }
 }

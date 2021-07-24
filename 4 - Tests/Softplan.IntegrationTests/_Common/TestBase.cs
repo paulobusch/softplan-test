@@ -16,7 +16,7 @@ namespace Softplan.IntegrationTests._Common
         public TestBase(SoftplanFixture fixture, string url)
         {
             Request = fixture.Request;
-            Uri = new Uri($"{fixture.Client.BaseAddress}/{url}");
+            Uri = new Uri($"{fixture.Client.BaseAddress}{url}");
 
             _mocks = fixture.Mocks;
         }
