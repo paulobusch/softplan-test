@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Softplan.Domain.Interfaces.Services;
+using Softplan.Services.IntegrationServices;
 using Softplan.Services.Services;
 using Softplan.Services.Settings;
 
@@ -22,6 +23,8 @@ namespace Softplan.Api2
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<Api1Settings>(Configuration.GetSection("Api1"));
+
+            services.AddScoped<InterestCalculatorIntegrationServices>();
 
             services.AddScoped<IApi1Service, Api1Service>();
             services.AddScoped<IFeeService, FeeService>();
