@@ -4,7 +4,7 @@ using Softplan.Domain.Core.Results;
 namespace Softplan.Api1.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public abstract class SoftplanControllerBase : ControllerBase
     {
         protected Result GetResult(Result result)
@@ -13,13 +13,13 @@ namespace Softplan.Api1.Controllers
             return result;
         }
 
-        protected Result<T> GetResult<T>(Result<T> result) where T : class
+        protected Result<T> GetResult<T>(Result<T> result)
         {
             Response.StatusCode = (int)result.Status;
             return result;
         }
 
-        protected Result<T> GetResult<T>(T data) where T : class
+        protected Result<T> GetResult<T>(T data)
         {
             return new Result<T>(data);
         }
