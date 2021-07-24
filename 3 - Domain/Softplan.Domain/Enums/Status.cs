@@ -1,4 +1,4 @@
-﻿namespace Softplan.Domain.Core.Enums
+﻿namespace Softplan.Domain.Enums
 {
     public enum Status
     {

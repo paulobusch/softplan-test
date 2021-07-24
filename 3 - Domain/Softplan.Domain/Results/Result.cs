@@ -1,13 +1,13 @@
-﻿using Softplan.Domain.Core.Enums;
+﻿using Softplan.Domain.Enums;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
 
-namespace Softplan.Domain.Core.Results
+namespace Softplan.Domain.Results
 {
     public class Result<T>
     {
-        [JsonIgnore] 
+        [JsonIgnore]
         public Status Status { get; protected set; }
         public T Data { get; protected set; }
         public bool Success => Status == Status.Success && !_errorMessages.Any();

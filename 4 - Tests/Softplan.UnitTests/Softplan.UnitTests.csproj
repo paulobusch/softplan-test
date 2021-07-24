@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\..\2 - Services\Softplan.Services\Softplan.Services.csproj" />
   </ItemGroup>
 
 </Project>

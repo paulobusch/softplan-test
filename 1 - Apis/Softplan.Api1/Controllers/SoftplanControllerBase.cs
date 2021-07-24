@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Softplan.Domain.Core.Results;
+using Softplan.Domain.Results;
 
 namespace Softplan.Api1.Controllers
 {
