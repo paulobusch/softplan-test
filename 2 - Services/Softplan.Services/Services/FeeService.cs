@@ -2,7 +2,7 @@
 using Softplan.Domain.Params;
 using System;
 
-namespace Softplan.Services.Fees
+namespace Softplan.Services.Services
 {
     public class FeeService : IFeeService
     {

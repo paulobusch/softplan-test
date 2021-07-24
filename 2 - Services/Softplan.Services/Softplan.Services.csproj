@@ -8,4 +8,8 @@
     <ProjectReference Include="..\..\3 - Domain\Softplan.Domain\Softplan.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="IntegrationServices\" />
+  </ItemGroup>
+
 </Project>
