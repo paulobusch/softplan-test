@@ -7,7 +7,8 @@ namespace Softplan.Domain.Core.Results
 {
     public class Result<T>
     {
-        [JsonIgnore] public Status Status { get; protected set; }
+        [JsonIgnore] 
+        public Status Status { get; protected set; }
         public T Data { get; protected set; }
         public bool Success => Status == Status.Success && !_errorMessages.Any();
         public IEnumerable<string> ErrorMessages => _errorMessages.Any() ? _errorMessages.AsReadOnly() : null;
