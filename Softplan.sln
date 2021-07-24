@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.Domain", "3 - Domain\Softplan.Domain\Softplan.Domain.csproj", "{04428FD2-4CE9-4BAB-9DA8-2597C4A81C11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softplan.Services", "2 - Services\Softplan.Services\Softplan.Services.csproj", "{7FE2592E-74D0-414F-92FF-58E5C2E064D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{04428FD2-4CE9-4BAB-9DA8-2597C4A81C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04428FD2-4CE9-4BAB-9DA8-2597C4A81C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04428FD2-4CE9-4BAB-9DA8-2597C4A81C11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE2592E-74D0-414F-92FF-58E5C2E064D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE2592E-74D0-414F-92FF-58E5C2E064D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE2592E-74D0-414F-92FF-58E5C2E064D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE2592E-74D0-414F-92FF-58E5C2E064D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8939C7DF-5045-47A5-8BCC-FC0C957A24AE} = {6699F990-A0BB-49F2-A76B-ADED34A6DD95}
 		{04428FD2-4CE9-4BAB-9DA8-2597C4A81C11} = {4B31FAD4-BBC5-42EF-BDBE-7993CBDDFC40}
+		{7FE2592E-74D0-414F-92FF-58E5C2E064D9} = {0623DDDD-85D2-4468-AA79-53B84BB05F2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A61BA65-A67F-4829-AF03-01264B7CEA47}
