@@ -24,8 +24,4 @@
     <ProjectReference Include="..\..\1 - Apis\Softplan.Api2\Softplan.Api2.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

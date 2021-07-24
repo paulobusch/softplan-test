@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Softplan.Api2;
 using Softplan.IntegrationTests._Common.Application;
+using Softplan.IntegrationTests._Common.Utils;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -12,6 +13,7 @@ namespace Softplan.IntegrationTests
 {
     public class SoftplanFixture : IDisposable
     {
+        public Request Request { get; private set; }
         public HttpClient Client { get; private set; }
         public TestServer Server { get; private set; }
 
@@ -33,6 +35,7 @@ namespace Softplan.IntegrationTests
             Client.BaseAddress = new Uri(" https://localhost:44344");
             Client.DefaultRequestHeaders.Accept.Clear();
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            Request = new Request(Client);
         }
 
         private void ConfigureTestServices(IServiceCollection services) { }
