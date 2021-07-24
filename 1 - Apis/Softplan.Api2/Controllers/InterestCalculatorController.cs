@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Softplan.Domain.Params;
 using Softplan.Domain.Results;
 using Softplan.Services.IntegrationServices;
+using Softplan.Services.Models.Params;
 using System.Threading.Tasks;
 
 namespace Softplan.Api2.Controllers
@@ -17,7 +17,7 @@ namespace Softplan.Api2.Controllers
         }
 
         [HttpGet("calculajuros")]
-        public async Task<Result<decimal>> GetAsync([FromQuery] FeesParams feesParams) 
+        public async Task<Result<decimal>> GetAsync([FromQuery] FeeParams feesParams) 
             => GetResult(await _interestCalculatorIntegrationServices.CalculateFeeAsync(feesParams));
     }
 }

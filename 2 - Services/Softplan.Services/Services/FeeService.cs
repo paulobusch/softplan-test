@@ -6,11 +6,11 @@ namespace Softplan.Services.Services
 {
     public class FeeService : IFeeService
     {
-        public decimal Calculate(FeesParams feesParams)
+        public decimal Calculate(FeeDto feeDto)
         {
-            var fee = Convert.ToDouble(feesParams.Fee);
-            var totalFees = Math.Pow(fee + 1, Convert.ToDouble(feesParams.Time));
-            var result = Convert.ToDecimal(Convert.ToDouble(feesParams.Capital) * totalFees);
+            var fee = Convert.ToDouble(feeDto.Fee);
+            var totalFees = Math.Pow(fee + 1, Convert.ToDouble(feeDto.Time));
+            var result = Convert.ToDecimal(Convert.ToDouble(feeDto.Capital) * totalFees);
             return decimal.Round(result, 2, MidpointRounding.ToZero);
         }
     }

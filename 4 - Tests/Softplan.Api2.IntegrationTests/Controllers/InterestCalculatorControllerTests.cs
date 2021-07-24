@@ -1,6 +1,5 @@
 ﻿using Moq;
 using Softplan.Domain.Interfaces.Services;
-using Softplan.Domain.Params;
 using Softplan.Domain.Results;
 using Softplan.IntegrationTests._Common;
 using Softplan.IntegrationTests._Common.Results;
@@ -17,18 +16,18 @@ namespace Softplan.IntegrationTests.Controllers
 
         public static IEnumerable<object[]> CalculateData()
         {
-            yield return new object[] { new FeesParams { Capital = 100, Time = 5, Fee = 0.01m }, 105.10m };
-            yield return new object[] { new FeesParams { Capital = 50000, Time = 6, Fee = 0.08m }, 79343.71m };
+            yield return new object[] { new { valorinicial = 100, meses = 5 }, 0.01m, 105.10m };
+            yield return new object[] { new { valorinicial = 50000, meses = 6 }, 0.08m, 79343.71m };
         }
 
         [Theory]
         [MemberData(nameof(CalculateData))]
-        public async Task ShouldCalculateAsync(FeesParams feesParams, decimal expectedResult)
+        public async Task ShouldCalculateAsync(object feeParams, decimal fee, decimal expectedResult)
         {
             var apiMock = GetMock<IApi1Service>();
-            apiMock.Setup(a => a.GetFeeAsync()).ReturnsAsync(new Result<decimal>(feesParams.Fee));
+            apiMock.Setup(a => a.GetFeeAsync()).ReturnsAsync(new Result<decimal>(fee));
 
-            var (response, result) = await Request.GetAsync<ResultTest<decimal>>(new Uri($"{Uri}/calculajuros"), feesParams);
+            var (response, result) = await Request.GetAsync<ResultTest<decimal>>(new Uri($"{Uri}/calculajuros"), feeParams);
 
             response.EnsureSuccessStatusCode();
             Assert.Equal(expectedResult, result.Data);

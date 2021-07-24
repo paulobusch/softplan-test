@@ -1,6 +1,7 @@
 ﻿using Softplan.Domain.Interfaces.Services;
 using Softplan.Domain.Params;
 using Softplan.Domain.Results;
+using Softplan.Services.Models.Params;
 using System.Threading.Tasks;
 
 namespace Softplan.Services.IntegrationServices
@@ -19,13 +20,17 @@ namespace Softplan.Services.IntegrationServices
             _api1Service = api1Service;
         }
 
-        public async Task<Result<decimal>> CalculateFeeAsync(FeesParams feesParams)
+        public async Task<Result<decimal>> CalculateFeeAsync(FeeParams feesParams)
         {
             var feeResult = await _api1Service.GetFeeAsync();
             if (!feeResult.Success) return feeResult;
 
-            feesParams.Fee = feeResult.Data;
-            var result = _feeService.Calculate(feesParams);
+            var feeDto = new FeeDto { 
+                Time = feesParams.Time,
+                Capital = feesParams.Capital,
+                Fee = feeResult.Data
+            };
+            var result = _feeService.Calculate(feeDto);
             return new Result<decimal>(result);
         }
     }

@@ -4,6 +4,6 @@ namespace Softplan.Domain.Interfaces.Services
 {
     public interface IFeeService
     {
-        public decimal Calculate(FeesParams feesParams);
+        public decimal Calculate(FeeDto feeDto);
     }
 }
