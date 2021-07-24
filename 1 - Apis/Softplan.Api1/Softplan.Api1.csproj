@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\..\3 - Domain\Softplan.Domain.Core\Softplan.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>
