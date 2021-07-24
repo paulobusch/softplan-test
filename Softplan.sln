@@ -3,9 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Apis", "1 - Apis", "{6699F990-A0BB-49F2-A76B-ADED34A6DD95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softplan.Api1", "1 - Apis\Softplan.Api1\Softplan.Api1.csproj", "{8939C7DF-5045-47A5-8BCC-FC0C957A24AE}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8939C7DF-5045-47A5-8BCC-FC0C957A24AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8939C7DF-5045-47A5-8BCC-FC0C957A24AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8939C7DF-5045-47A5-8BCC-FC0C957A24AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8939C7DF-5045-47A5-8BCC-FC0C957A24AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8939C7DF-5045-47A5-8BCC-FC0C957A24AE} = {6699F990-A0BB-49F2-A76B-ADED34A6DD95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A61BA65-A67F-4829-AF03-01264B7CEA47}

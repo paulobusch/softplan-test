@@ -1,3 +1,3 @@
 # Softplan API's 
 ## Framework
-- NetCore 3.1
+- NetCore 5.0
