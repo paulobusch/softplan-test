@@ -22,7 +22,7 @@ namespace Softplan.IntegrationTests.Controllers
 
         [Theory]
         [MemberData(nameof(CalculateData))]
-        public async Task CalculateAsync(FeesParams feesParams, decimal expectedResult)
+        public async Task ShouldCalculateAsync(FeesParams feesParams, decimal expectedResult)
         {
             var apiMock = GetMock<IApi1Service>();
             apiMock.Setup(a => a.GetFeeAsync()).ReturnsAsync(new Result<decimal>(feesParams.Fee));

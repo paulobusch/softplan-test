@@ -22,7 +22,7 @@ namespace Softplan.UnitTests.Services
 
         [Theory]
         [MemberData(nameof(CalculateData))]
-        public void Calculate(FeesParams feesParams, decimal expectedResult)
+        public void ShouldCalculate(FeesParams feesParams, decimal expectedResult)
         {
             var service = new FeeService();
 
