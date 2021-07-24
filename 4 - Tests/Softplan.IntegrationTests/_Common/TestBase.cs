@@ -17,12 +17,15 @@ namespace Softplan.IntegrationTests._Common
         {
             Request = fixture.Request;
             Uri = new Uri($"{fixture.Client.BaseAddress}/{url}");
+
+            _mocks = fixture.Mocks;
         }
 
         protected Mock<T> GetMock<T>() where T : class
         {
             var type = typeof(T);
-            if (!_mocks.ContainsKey(type)) return null;
+            if (!_mocks.ContainsKey(type)) 
+                throw new InvalidOperationException($"Mock of type: {type.Name} is not configured");
             var mock = _mocks[type];
             mock.Invocations.Clear();
             return mock as Mock<T>;

@@ -1,5 +1,5 @@
 ﻿using Softplan.Domain.Params;
-using Softplan.Services.Fees;
+using Softplan.Services.Services;
 using Softplan.UnitTests._Common;
 using System.Collections.Generic;
 using Xunit;

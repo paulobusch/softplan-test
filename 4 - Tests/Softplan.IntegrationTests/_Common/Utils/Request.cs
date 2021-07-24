@@ -73,6 +73,9 @@ namespace Softplan.IntegrationTests._Common.Utils
             return string.Join("&", props);
         }
 
+        private string ConvertObjectToString(object value)
+            => JsonConvert.SerializeObject(value).Replace(@"""", "");
+
         #endregion
     }
 }
