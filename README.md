@@ -3,4 +3,5 @@
 - NetCore 5.0
 
 ## Documentação
- - https://localhost:44398/swagger/index.html
+ - **API1**: https://localhost:44398/swagger/index.html
+ - **API2**: https://localhost:44344/swagger/index.html
