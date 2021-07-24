@@ -23,6 +23,11 @@ namespace Softplan.Api1
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Softplan.Api1", Version = "v1" });
             });
+            services.AddMvcCore()
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.IgnoreNullValues = true;
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

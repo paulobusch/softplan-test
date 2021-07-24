@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Service
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{4B31FAD4-BBC5-42EF-BDBE-7993CBDDFC40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softplan.Domain.Core", "3 - Domain\Softplan.Domain.Core\Softplan.Domain.Core.csproj", "{3B5FA50B-8E30-49CE-8562-5A3A4CB77830}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softplan.Domain", "3 - Domain\Softplan.Domain.Core\Softplan.Domain.csproj", "{3B5FA50B-8E30-49CE-8562-5A3A4CB77830}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

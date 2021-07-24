@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\3 - Domain\Softplan.Domain.Core\Softplan.Domain.Core.csproj" />
+    <ProjectReference Include="..\..\3 - Domain\Softplan.Domain.Core\Softplan.Domain.csproj" />
   </ItemGroup>
 
 </Project>
